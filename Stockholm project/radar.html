@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cloud Seeding Radar</title>
+  <link rel="stylesheet" href="radar.css">
+</head>
+<body>
+
+  <div class="glass-logo-container">
+    <img src="logo.png" alt="Logo">
+  </div>
+
+<nav class="glass-navbar">
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+
+    <li class="dropdown-parent">
+      <a href="info.html">Information ▾</a>
+      <ul class="dropdown">
+        <li><a href="#">Disease</a></li>
+        <li><a href="history.html">History</a></li>
+
+        <li class="dropdown-parent">
+          <a href="radar.html">Radar ▸</a>
+          <ul class="dropdown dropdown-2">
+            <li><a href="#">Audio Guide</a></li>
+            <li><a href="#">Our E-book</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li><a href="survey.html">Take the Survey</a></li>
+    <li><a href="participate.html">Participate in Research</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+  </ul>
+</nav>
+
+  <h1>Synthetic Mangrove Cloud Radar preview</h1>
+
+
+  <div class="radar-container">
+
+    <div class="camera-box">
+      <h2>📷 Live Sky Camera</h2>
+      <video id="video" autoplay></video>
+    </div>
+
+
+    <div class="radar-box">
+      <h2>Radar Analysis</h2>
+      <canvas id="radarCanvas" width="300" height="300"></canvas>
+      <div id="cloud-status">Status: <span>Not a Cloud</span></div>
+      <div id="distance-info">Distance: <span>--</span> m</div>
+      <div id="seeding-readiness">Ready for NaCl: <span>No</span></div>
+    </div>
+  </div>
+
+  <audio id="alertSound" volume="0.2">
+    <source src="https://actions.google.com/sounds/v1/cartoon/pop.ogg" type="audio/ogg">
+  </audio>
+
+  <script src="radar.js"></script>
+</body>
+</html>
